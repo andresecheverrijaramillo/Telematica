@@ -147,3 +147,16 @@ hdfs dfs -cat /user/admin/reto3/punto1/parteB/part-00001
 hdfs dfs -cat /user/admin/reto3/punto1/parteB/part-00002
 ```
 Y nos debe dar esto  
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/a3a06065-4f99-4228-b99c-38b5399ed0bb)
+C
+```ssh
+python C.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto1/parteC
+```
+Si nos metemos a la carpeta user/admin/reto3/Dane-1 e inspeccionampos las partes con esto
+```ssh
+hdfs dfs -cat /user/admin/reto3/punto1/parteC/part-00000
+hdfs dfs -cat /user/admin/reto3/punto1/parteC/part-00001
+hdfs dfs -cat /user/admin/reto3/punto1/parteC/part-00002
+```
+Y nos debe dar esto  
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/1847b4f3-6752-4cc3-90e0-728921fc664f)
