@@ -123,6 +123,7 @@ Luego vamos a crear la carpeta de los resultados asi, agregandole un /punto# dep
 ```ssl
 hdfs dfs -mkdir /user/admin/reto3
 ```
+Punto 1
 A
 Y vamos a correr los codigos de esta manera
 ```ssh
@@ -140,7 +141,7 @@ B
 ```ssh
 python B.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto1/parteB
 ```
-Si nos metemos a la carpeta user/admin/reto3/Dane-1 e inspeccionampos las partes con esto
+Si nos metemos a la carpeta user/admin/reto3/punto1 e inspeccionampos las partes con esto
 ```ssh
 hdfs dfs -cat /user/admin/reto3/punto1/parteB/part-00000
 hdfs dfs -cat /user/admin/reto3/punto1/parteB/part-00001
@@ -152,7 +153,7 @@ C
 ```ssh
 python C.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto1/parteC
 ```
-Si nos metemos a la carpeta user/admin/reto3/Dane-1 e inspeccionampos las partes con esto
+Si nos metemos a la carpeta user/admin/reto3/punto1 e inspeccionampos las partes con esto
 ```ssh
 hdfs dfs -cat /user/admin/reto3/punto1/parteC/part-00000
 hdfs dfs -cat /user/admin/reto3/punto1/parteC/part-00001
@@ -160,3 +161,121 @@ hdfs dfs -cat /user/admin/reto3/punto1/parteC/part-00002
 ```
 Y nos debe dar esto  
 ![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/1847b4f3-6752-4cc3-90e0-728921fc664f)
+Punto 2
+A
+Y vamos a correr los codigos de esta manera
+```ssh
+python A.py hdfs:///user/admin/datasets/otros/dataempresas.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto2/parteA
+```
+Si nos metemos a la carpeta user/admin/reto3/punto2 e inspeccionampos las partes con esto
+```ssh
+hdfs dfs -cat /user/admin/reto3/punto2/parteA/part-00000
+hdfs dfs -cat /user/admin/reto3/punto2/parteA/part-00001
+hdfs dfs -cat /user/admin/reto3/punto2/parteA/part-00002
+```
+Y nos debe dar  
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/cf6d2d41-d426-42ee-a48f-b04893ea44b2)
+B
+Y vamos a correr los codigos de esta manera
+```ssh
+python B.py hdfs:///user/admin/datasets/otros/dataempresas.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto2/parteB
+```
+Si nos metemos a la carpeta user/admin/reto3/punto2 e inspeccionampos las partes con esto
+```ssh
+hdfs dfs -cat /user/admin/reto3/punto2/parteA/part-00000
+hdfs dfs -cat /user/admin/reto3/punto2/parteA/part-00001
+hdfs dfs -cat /user/admin/reto3/punto2/parteA/part-00002
+```
+Y nos debe dar  
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/cd72f386-23d5-445a-98b8-33a363896fd1)
+C
+Y vamos a correr los codigos de esta manera
+```ssh
+python B.py hdfs:///user/admin/datasets/otros/dataempresas.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto2/parteB
+```
+Si nos metemos a la carpeta user/admin/reto3/punto2 e inspeccionampos las partes con esto
+```ssh
+hdfs dfs -cat /user/admin/reto3/punto2/parteA/part-00000
+hdfs dfs -cat /user/admin/reto3/punto2/parteA/part-00001
+hdfs dfs -cat /user/admin/reto3/punto2/parteA/part-00002
+```
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/1a004f5f-9a1e-4a46-9df5-c8a578cf8683)
+Punto 3
+A
+Y vamos a correr los codigos de esta manera
+```ssh
+python A.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto3/parteA
+```
+Si nos metemos a la carpeta user/admin/reto3/punto3 e inspeccionampos las partes con esto
+```ssh
+hdfs dfs -cat /user/admin/reto3/punto3/parteA/part-00000
+hdfs dfs -cat /user/admin/reto3/punto3/parteA/part-00001
+hdfs dfs -cat /user/admin/reto3/punto3/parteA/part-00002
+```
+Y nos debe dar  
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/2aba5679-1e22-4bdf-89a4-77ce798933c3)
+B
+Y vamos a correr los codigos de esta manera
+```ssh
+python B.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto3/parteB
+```
+Si nos metemos a la carpeta user/admin/reto3/punto3 e inspeccionampos las partes con esto
+```ssh
+hdfs dfs -cat /user/admin/reto3/punto3/parteB/part-00000
+hdfs dfs -cat /user/admin/reto3/punto3/parteB/part-00001
+hdfs dfs -cat /user/admin/reto3/punto3/parteB/part-00002
+```
+Y nos debe dar  
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/1279a0dd-c8d2-42f7-b23b-979fe30c41f3)
+C
+Y vamos a correr los codigos de esta manera
+```ssh
+python C.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto3/parteC
+```
+Si nos metemos a la carpeta user/admin/reto3/punto3 e inspeccionampos las partes con esto
+```ssh
+hdfs dfs -cat /user/admin/reto3/punto3/parteC/part-00000
+hdfs dfs -cat /user/admin/reto3/punto3/parteC/part-00001
+hdfs dfs -cat /user/admin/reto3/punto3/parteC/part-00002
+```
+Y nos debe dar  
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/5a87232f-7ea9-4479-9455-07b73b04c9cd)
+D
+Y vamos a correr los codigos de esta manera
+```ssh
+python D.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto3/parteD
+```
+Si nos metemos a la carpeta user/admin/reto3/punto3 e inspeccionampos las partes con esto
+```ssh
+hdfs dfs -cat /user/admin/reto3/punto3/parteD/part-00000
+hdfs dfs -cat /user/admin/reto3/punto3/parteD/part-00001
+hdfs dfs -cat /user/admin/reto3/punto3/parteD/part-00002
+```
+Y nos debe dar  
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/2ffa5ea9-cc9f-45b3-8d6f-17bb4f4aa555)
+E
+Y vamos a correr los codigos de esta manera
+```ssh
+python E.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto3/parteE
+```
+Si nos metemos a la carpeta user/admin/reto3/punto3 e inspeccionampos las partes con esto
+```ssh
+hdfs dfs -cat /user/admin/reto3/punto3/parteE/part-00000
+hdfs dfs -cat /user/admin/reto3/punto3/parteE/part-00001
+hdfs dfs -cat /user/admin/reto3/punto3/parteE/part-00002
+```
+Y nos debe dar  
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/7e92296b-d7f9-4dcd-840d-c96463bb4e19)
+F
+Y vamos a correr los codigos de esta manera
+```ssh
+python F.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto3/parteF
+```
+Si nos metemos a la carpeta user/admin/reto3/punto3 e inspeccionampos las partes con esto
+```ssh
+hdfs dfs -cat /user/admin/reto3/punto3/parteF/part-00000
+hdfs dfs -cat /user/admin/reto3/punto3/parteF/part-00001
+hdfs dfs -cat /user/admin/reto3/punto3/parteF/part-00002
+```
+Y nos debe dar 
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/c3432b82-ffc1-41d2-adef-7818025049ec)
