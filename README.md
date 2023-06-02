@@ -279,3 +279,16 @@ hdfs dfs -cat /user/admin/reto3/punto3/parteF/part-00002
 ```
 Y nos debe dar 
 ![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/c3432b82-ffc1-41d2-adef-7818025049ec)
+G
+Y vamos a correr los codigos de esta manera
+```ssh
+python G.py hdfs:///user/admin/datasets/otros/datapeliculas.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto3/parteG
+```
+Si nos metemos a la carpeta user/admin/reto3/punto3 e inspeccionampos las partes con esto
+```ssh
+hdfs dfs -cat /user/admin/reto3/punto3/parteG/part-00000
+hdfs dfs -cat /user/admin/reto3/punto3/parteG/part-00001
+hdfs dfs -cat /user/admin/reto3/punto3/parteG/part-00002
+```
+Y nos debe dar 
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/84f41a1a-4581-4015-826c-6132110d88a2)
