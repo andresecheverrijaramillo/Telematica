@@ -123,10 +123,10 @@ Luego vamos a crear la carpeta de los resultados asi, agregandole un /punto# dep
 ```ssl
 hdfs dfs -mkdir /user/admin/reto3
 ```
-
+A
 Y vamos a correr los codigos de esta manera
 ```ssh
-python A.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto1
+python A.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto1/parteA
 ```
 Si nos metemos a la carpeta user/admin/reto3/Dane-1 e inspeccionampos las partes con esto
 ```ssh
@@ -134,3 +134,16 @@ hdfs dfs -cat /user/admin/reto3/punto1/parteA/part-00000
 hdfs dfs -cat /user/admin/reto3/punto1/parteA/part-00001
 hdfs dfs -cat /user/admin/reto3/punto1/parteA/part-00002
 ```
+Y nos debe dar esto  
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/87bf325d-f9a6-4567-b265-badc4f0b8a83)
+B
+```ssh
+python B.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto1/parteB
+```
+Si nos metemos a la carpeta user/admin/reto3/Dane-1 e inspeccionampos las partes con esto
+```ssh
+hdfs dfs -cat /user/admin/reto3/punto1/parteB/part-00000
+hdfs dfs -cat /user/admin/reto3/punto1/parteB/part-00001
+hdfs dfs -cat /user/admin/reto3/punto1/parteB/part-00002
+```
+Y nos debe dar esto  
