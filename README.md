@@ -114,3 +114,23 @@ vamos a entrar al resultado del primer txt
 ![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/7b3a0b83-46e4-4ea8-80b5-f6f0bda22add)
 
 Y con esto finalizamos este laboratorio y reto
+## Reto de codigo
+Ya en este reto vamos a hacer lo siguiente, primero vamos a copiar el codigo que se desarrollo en el home
+```ssh
+sudo git clone https://github.com/andresecheverrijaramillo/Telematica.git
+```
+Luego vamos a crear la carpeta de los resultados asi, agregandole un /punto# depende del punto que estemos haciendo
+```ssl
+hdfs dfs -mkdir /user/admin/reto3
+```
+
+Y vamos a correr los codigos de esta manera
+```ssh
+python A.py hdfs:///user/admin/datasets/otros/dataempleados.txt -r hadoop --output-dir hdfs:////user/admin/reto3/punto1
+```
+Si nos metemos a la carpeta user/admin/reto3/Dane-1 e inspeccionampos las partes con esto
+```ssh
+hdfs dfs -cat /user/admin/reto3/punto1/parteA/part-00000
+hdfs dfs -cat /user/admin/reto3/punto1/parteA/part-00001
+hdfs dfs -cat /user/admin/reto3/punto1/parteA/part-00002
+```
