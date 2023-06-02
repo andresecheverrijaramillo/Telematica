@@ -86,3 +86,31 @@ Y usamos el siguiente comando para ver los resultados
 more salida-serial.txt
 ```
 ![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/9bc9cca4-d867-4ea5-b2a4-2229039df5bb)
+Ahora vamos a instalar python3 y MrJob
+```ssh
+sudo yum install python3-pip
+sudo pip3 install mrjob
+```
+Ya vamos a testear MrJob
+```
+python wordcount-mr.py /home/hadoop/st0263-2023-1/datasets/gutenberg-small/*.txt
+```
+Ya vamos a hacer el reto de este laboratorio que es correrlo en hadoop, para esto vamos a copiar los dataset a hadoop de esta manera
+```ssh
+hdfs dfs -mkdir /user/admin
+hdfs dfs -copyFromLocal /home/hadoop/st0263-2023-1/datasets/ /user/admin/
+```
+Ahi creamos la carpeta del admmin en hadoop y copiamos los dataset, despues vamos a correr el codigo con esta linea
+```ssh
+python wordcount-mr.py hdfs:///user/admin/datasets/gutenberg-small/*.txt -r hadoop --output-dir hdfs:///user/admin/result3 
+```
+Al correrlo sale esto  
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/761b8113-55e6-44de-a294-0aa9fc08d15c)
+Y sabemos que funciona porque si hacemos 
+```ssh
+hdfs dfs -cat /user/admin/result3/part-00000
+```
+vamos a entrar al resultado del primer txt  
+![image](https://github.com/andresecheverrijaramillo/Telematica/assets/68928458/7b3a0b83-46e4-4ea8-80b5-f6f0bda22add)
+
+Y con esto finalizamos este laboratorio y reto
