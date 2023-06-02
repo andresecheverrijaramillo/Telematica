@@ -1,16 +1,16 @@
 from mrjob.job import MRJob
 
-class MinMaxStockPrice(MRJob):
+class accionMinMax(MRJob):
     def mapper(self, _, line):
         for w in line.split():
             filing = w.split(',')
             yield filing[0],(float(filing[1]), filing[2])
     
     def reducer(self, key, values):
-        prices = list(values)
-        min_price = min(prices)
-        max_price = max(prices)
-        yield key, (min_price[1],max_price[1])
+        precios = list(values)
+        preciosMin = min(precios)
+        preciosMax = max(precios)
+        yield key, (preciosMin[1],preciosMax[1])
 
 if __name__ == '__main__':
-    MinMaxStockPrice.run()
+    accionMinMax.run()

@@ -1,6 +1,6 @@
 from mrjob.job import MRJob
 
-class SececonsByEmployee(MRJob):
+class secEcEmp(MRJob):
 
     def mapper(self, _, line):
         for w in line.split():
@@ -10,8 +10,8 @@ class SececonsByEmployee(MRJob):
             yield idemp, sececon
 
     def reducer(self, key, values):
-        unique_sececons = set(values)
-        yield key, len(unique_sececons)
+        sececonsUnicos = set(values)
+        yield key, len(sececonsUnicos)
 
 if __name__ == '__main__':
-    SececonsByEmployee.run()
+    secEcEmp.run()
